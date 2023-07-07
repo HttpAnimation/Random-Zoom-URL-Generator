@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Random Zoom URL Generator</title>
+  <style>
+    body {
+      background-color: #36393F;
+      color: #FFF;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #2C2F33;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .input-group {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .input-group input[type="text"] {
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #202225;
+      color: #FFF;
+    }
+
+    .input-group button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #7289DA;
+      color: #FFF;
+      cursor: pointer;
+    }
+
+    .input-group button:hover {
+      background-color: #5A6B8C;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Random Zoom URL Generator</h2>
+    <div class="input-group">
+      <input type="text" id="zoom-url" readonly>
+      <button onclick="generateRandomURL()">Generate</button>
+    </div>
+  </div>
+
+  <script>
+    function generateRandomURL() {
+      var baseURL = "https://us02web.zoom.us/j/";
+      var randomNumbers = Math.floor(Math.random() * 1000000000).toString().substr(0, 10);
+      var zoomURL = baseURL + randomNumbers;
+      document.getElementById("zoo  m-url").value = zoomURL;
+    }
+  </script>
+</body>
+<center><h1>Script by: httpanimations on discord</h1></center>
+</html>
